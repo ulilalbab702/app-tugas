@@ -70,6 +70,9 @@ import imageNotFound from './not-found.svg'
 import klikut from './klikut.png'
 import bgFeature from './bgFeature.png'
 import logoUTC from './LogoUTC.png'
+import jam200 from './jam_200.jpg'
+import jam_1200 from './jam_1200.jpg'
+import brake2 from './brake2.png'
 
 import imageMaterialSearch from './imageMaterialSearch.png'
 export {
@@ -144,4 +147,7 @@ export {
   klikut,
   bgFeature,
   logoUTC,
+  jam200,
+  jam_1200,
+  brake2,
 };

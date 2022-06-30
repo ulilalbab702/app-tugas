@@ -15,10 +15,8 @@ import {
 const initialState = {
     data: null,
     dataDetail: null,
-    dataFitur: null,
-    loading: false,
     error: null,
-    errorFitur: null,
+    loading: false,
 }
 
 export const video = (state = { ...initialState }, action) => {
@@ -46,6 +44,20 @@ export const video = (state = { ...initialState }, action) => {
             const { error } = payload;
             return { ...state, dataDetail: null, error: error, loading: false }
         };
+        default:
+            return state;
+    };
+};
+
+const initialStateFitur = {
+    dataFitur: null,
+    loading: false,
+    errorFitur: null,
+}
+
+export const fitur = (state = { ...initialStateFitur }, action) => {
+    const { payload, type } = action;
+    switch (type) {
         case GET_FITUR_UTCONNECT_REQ: {
             return { ...state, dataFitur: null, errorFitur: null, loading: true }
         };
@@ -62,10 +74,9 @@ export const video = (state = { ...initialState }, action) => {
     };
 };
 
-
-
 const videoReducer = combineReducers({
     video,
+    fitur,
 });
 
 export { videoReducer };

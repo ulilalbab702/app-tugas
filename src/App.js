@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import { HomePage } from './views';
+import routes from './route';
+import {ConnectedRouter} from 'connected-react-router'
 
 function App() {
   return (
     <div className="App">
-      <HomePage/>
-      <div>
-      </div>
+      <ConnectedRouter history={this.props.history}>
+        {routes}
+        </ConnectedRouter>
     </div>
   );
 }
